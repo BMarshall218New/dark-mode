@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode(false);//why does "value" need to be in ""
   const toggleMode = e => {
     e.preventDefault();
     setDarkMode(!darkMode);
